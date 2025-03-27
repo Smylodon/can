@@ -18,11 +18,11 @@ import sys
 
 # Verifica se tqdm está instalado, se não, instala automaticamente
 try:
-    import tqdm
+    from tqdm import tqdm
 except ImportError:
     print("Instalando tqdm...")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "tqdm"])
-    import tqdm  # Importa novamente após a instalação
+    from tqdm import tqdm
 
 init(autoreset=True)
 green = Fore.GREEN
